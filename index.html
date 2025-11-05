@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity-Roadmap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="cybersec-roadmap-icon-bg.png" type="image/png">   
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🔐 Cybersecurity Learning Roadmap</h1>
+            <p class="subtitle">660-760 hours | 40 weeks</p>
+        </header>
+
+        <!-- Controls Bar -->
+        <div class="controls-bar">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="🔍 Search topics, resources, or labs..." class="search-input">
+            </div>
+            <div class="control-buttons">
+                <button id="darkModeToggle" class="btn btn--secondary" title="Toggle Dark Mode">🌙</button>
+                <button id="zoomIn" class="btn btn--secondary" title="Zoom In">🔍+</button>
+                <button id="zoomOut" class="btn btn--secondary" title="Zoom Out">🔍-</button>
+                <button id="resetView" class="btn btn--secondary" title="Reset View">↺</button>
+                <button id="expandAll" class="btn btn--secondary" title="Expand All Phases">▼</button>
+                <button id="collapseAll" class="btn btn--secondary" title="Collapse All Phases">▲</button>
+                <button id="exportSVG" class="btn btn--primary" title="Export as PDF">📥 Export</button>
+            </div>
+        </div>
+
+        <!-- Date Selector -->
+        <div class="date-selector-section">
+            <label for="startDatePicker" class="date-selector-label">Learning Start:</label>
+            <input type="date" id="startDatePicker" class="date-selector-input" value="2025-11-04">
+        </div>
+
+        <!-- Roadmap Container -->
+        <div class="roadmap-viewport" id="roadmapViewport">
+            <div class="roadmap-container" id="roadmapContainer">
+                <div class="roadmap-content" id="roadmapContent">
+                    <!-- Start Node -->
+                    <div class="start-node">
+                        <div class="node-badge">START</div>
+                        <p>Begin Your Journey</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="arrow-connector">↓</div>
+
+                    <!-- Phases will be dynamically rendered here -->
+                    <div id="phasesContainer"></div>
+
+                    <!-- End Node -->
+                    <div class="end-node">
+                        <div class="node-badge">🎯 JOB READY</div>
+                        <p class="time-estimate">660-760 hours | 40 weeks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="progress-section">
+            <h3>📊 Progress Tracker</h3>
+            <div class="progress-grid" id="progressGrid">
+                <!-- Progress items will be dynamically rendered -->
+            </div>
+            <div class="total-progress">
+                <div class="progress-label">Overall Completion</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="overallProgress" style="width: 0%"></div>
+                </div>
+                <div class="progress-percentage" id="overallPercentage">0%</div>
+            </div>
+        </div>
+
+        <!-- Timeline Information (Moved to Bottom) -->
+        <div class="timeline-section">
+            <h2 class="timeline-title">📅 Timeline Information</h2>
+            
+            <div class="timeline-dates">
+                <div class="timeline-date-card">
+                    <div class="timeline-date-label">Learning Start</div>
+                    <div class="timeline-date-value" id="startDate">November 4, 2025</div>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-date-card timeline-date-card--end">
+                    <div class="timeline-date-label">Estimated Completion</div>
+                    <div class="timeline-date-value" id="endDate">August 11, 2026</div>
+                    <div class="timeline-date-sub" id="weeksRemaining">40 weeks</div>
+                </div>
+            </div>
+
+            <div class="timeline-phases" id="timelinePhases">
+                <!-- Phase timeline items will be dynamically rendered -->
+            </div>
+
+            <div class="timeline-status" id="timelineStatus">
+                <h3>Current Status</h3>
+                <div class="timeline-status-grid">
+                    <div class="timeline-status-item">
+                        <div class="timeline-status-label">Weeks Remaining</div>
+                        <div class="timeline-status-value" id="statusWeeksRemaining">40</div>
+                    </div>
+                    <div class="timeline-status-item">
+                        <div class="timeline-status-label">Sub-topics Remaining</div>
+                        <div class="timeline-status-value" id="statusSubTopicsRemaining">19</div>
+                    </div>
+                    <div class="timeline-status-item">
+                        <div class="timeline-status-label">Progress</div>
+                        <div class="timeline-status-value" id="statusProgress">0%</div>
+                    </div>
+                    <div class="timeline-status-item timeline-status-item--full">
+                        <div class="timeline-status-label">Estimated Job-Ready Date</div>
+                        <div class="timeline-status-value timeline-status-value--highlight" id="statusJobReadyDate">August 11, 2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Total Study Time: ~660-760 hours over 40 weeks (2-3 hours daily + weekend deep dives)</p>
+            <p>Target Roles: SOC Analyst, Junior Penetration Tester, Security Analyst</p>
+        </footer>
+		
+		<!-- Framework Attribution Button -->
+        <div class="framework-attribution">
+            <a href="https://roadmap.sh/cyber-security" target="_blank" class="framework-button" title="View Original Roadmap Framework">
+                <span class="framework-icon">📖</span>
+                <span class="framework-text">Based on roadmap.sh Cybersecurity Framework</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
