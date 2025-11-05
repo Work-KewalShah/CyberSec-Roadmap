@@ -20,7 +20,7 @@ const phasesData = [
           'File systems and partitioning'
         ],
         resources: [
-          { name: 'Linux Journey', link: 'https://linuxjourney.com', time: '0' },
+          { name: 'Linux Journey', link: 'https://linuxjourney.com', time: '4-6 hrs' },
           { name: 'NetworkChuck YouTube - Linux Basics', link: 'https://www.youtube.com/c/NetworkChuck', time: '8-10 hrs' }
         ],
         labs: [
